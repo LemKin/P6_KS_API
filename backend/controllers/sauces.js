@@ -1,3 +1,4 @@
+// Afficher toutes les sauces
 exports.getAllSauces = (req, res, next) => {
     console.log(req.body)
     res.status(200).send({
@@ -5,6 +6,7 @@ exports.getAllSauces = (req, res, next) => {
     })
 };
 
+// Afficher une sauce
 exports.getSauce = (req, res, next) => {
     console.log(req.body)
     res.status(200).send({
@@ -12,6 +14,7 @@ exports.getSauce = (req, res, next) => {
     })
 }
 
+// Création d'une nouvelle sauce
 exports.postSauce = (req, res, next) => {
     const image = req.file;
     const sauce = JSON.parse(req.body.sauce);
@@ -21,6 +24,7 @@ exports.postSauce = (req, res, next) => {
     })
 }
 
+// Modifier une sauce
 exports.putSauce = (req, res, next) => {
     console.log(req.body)
     res.status(200).send({
@@ -28,6 +32,7 @@ exports.putSauce = (req, res, next) => {
     })
 }
 
+// Supprimer une sauce
 exports.deleteSauce = (req, res, next) => {
     console.log(req.body)
     res.status(204).send({
@@ -35,6 +40,7 @@ exports.deleteSauce = (req, res, next) => {
     })
 }
 
+// Like/Dislike
 exports.postLikeSauce = (req, res, next) => {
     console.log(req.body)
     res.status(200).send({
