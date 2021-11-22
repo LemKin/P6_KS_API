@@ -8,6 +8,7 @@ exports.getAllSauce = (req, res, next) => {
 		.catch(error => res.status(404).jsons({ error }));
 };
 
+
 // Afficher une sauce
 exports.getOneSauce = (req, res, next) => {
 	Sauce.findOne({ _id: req.params.id })

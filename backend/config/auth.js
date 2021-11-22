@@ -2,6 +2,7 @@ const jwt = require('jsonwebtoken');
 
 const DEFAULT_TOKEN_KEY = 'azertyuiop';
 
+//Création du token d'authentification
 module.exports = (req, res, next) => {
     try {
         const token = req.headers.authorization.split(' ')[1];
