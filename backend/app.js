@@ -12,6 +12,7 @@ const port = 3000;
 app.use(cors());
 app.use(express.json());
 
+//lien MongoDB
 mongoose.connect('mongodb+srv://LemKin:KSpro1986@cluster0.najen.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
   { useNewUrlParser: true,
     useUnifiedTopology: true })
@@ -20,6 +21,7 @@ mongoose.connect('mongodb+srv://LemKin:KSpro1986@cluster0.najen.mongodb.net/myFi
 
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
+//Routes auth et sauces
 app.use('/api/auth', userRoutes);
 app.use('/api/sauces', saucesRoutes);
 

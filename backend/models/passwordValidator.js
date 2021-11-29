@@ -1,5 +1,3 @@
-
-   
 const passwordValidator = require("password-validator");
 
 // Creation du schema
